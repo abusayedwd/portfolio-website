@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Calendar } from "lucide-react";
@@ -30,11 +31,21 @@ function ProjectCard({ project }: { project: Project }) {
       className="group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/10"
     >
       <div className="relative h-48 overflow-hidden">
-        <ProjectVisual
-          projectId={project.id}
-          title={project.title}
-          className="h-full w-full transition-transform duration-700 group-hover:scale-105"
-        />
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={`${project.title} preview`}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <ProjectVisual
+            projectId={project.id}
+            title={project.title}
+            className="h-full w-full transition-transform duration-700 group-hover:scale-105"
+          />
+        )}
         <div className="absolute right-4 top-4 flex gap-2">
           <Badge variant={STATUS_VARIANT[project.status]} className="backdrop-blur-md">
             {project.status}
@@ -83,27 +94,38 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
 
-        <div className="mt-auto flex items-center gap-3 border-t border-border pt-4">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${project.title} source code on GitHub`}
-            className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        <div className="mt-auto flex flex-wrap items-center gap-3 border-t border-border pt-4">
+          <Link
+            href={`/projects/${project.id}`}
+            aria-label={`${project.title} details`}
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            <FaGithub className="size-4" aria-hidden />
-            Code
-          </a>
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${project.title} live demo`}
-            className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-all hover:gap-2"
-          >
-            Live Demo
-            <ArrowUpRight className="size-4" aria-hidden />
-          </a>
+            Details
+          </Link>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} source code on GitHub`}
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <FaGithub className="size-4" aria-hidden />
+              Code
+            </a>
+          )}
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} live demo`}
+              className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-all hover:gap-2"
+            >
+              Live Demo
+              <ArrowUpRight className="size-4" aria-hidden />
+            </a>
+          )}
         </div>
       </div>
     </motion.article>

@@ -1,25 +1,24 @@
 import type { NavLink } from "@/types";
 
 export const SITE_CONFIG = {
-  name: "Adnan Sayed",
+  name: "Abu Sayed",
   initials: "AS",
-  role: "Senior Frontend Engineer & Full-Stack Developer",
+  role: "Full-Stack Developer",
   roles: [
-    "Senior Frontend Engineer",
     "Full-Stack Developer",
-    "Product Engineer",
-    "UI Engineer",
-    "Open Source Contributor",
+    "Frontend Developer",
+    "React.js Developer",
+    "Next.js Developer",
   ],
   tagline:
-    "I build high-performance, accessible web products that feel polished, scale cleanly, and ship with confidence.",
-  email: "hello@adnansayed.dev",
+    "I build responsive web applications and REST API integrations with React, Next.js, and Node.js.",
+  email: "abusayednalita1234@gmail.com",
   location: "Dhaka, Bangladesh",
-  availability: "Open to Senior Frontend / Full-Stack opportunities",
+  availability: "Open to Full-Stack / Frontend opportunities",
   url: "https://adnansayed.dev",
   resumeUrl: "/resume.pdf",
-  yearsOfExperience: 7,
-  githubUsername: "adnansayed",
+  yearsOfExperience: 2,
+  githubUsername: "abusayedwd",
 } as const;
 
 export const NAV_LINKS: NavLink[] = [

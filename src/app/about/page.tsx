@@ -7,7 +7,7 @@ import { Stats } from "@/components/sections/stats";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about my journey from freelancer to senior full stack engineer — my values, experience, and what drives me.",
+    "Learn about my journey from frontend developer to full-stack developer — my experience, education, and what drives me.",
   alternates: { canonical: "/about" },
 };
 
@@ -17,7 +17,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Me"
         title="The person behind the pixels"
-        description="Seven years of shipping products, growing teams, and chasing that perfect balance of craft and speed."
+        description="Two years of building responsive web applications across the frontend and backend."
       />
       <About />
       <Stats />

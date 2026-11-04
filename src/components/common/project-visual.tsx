@@ -13,6 +13,10 @@ const PALETTES: Record<string, string> = {
   "glass-kit": "from-sky-500 via-indigo-500 to-violet-600",
   devboard: "from-blue-600 via-indigo-600 to-violet-700",
   "aurora-landing": "from-purple-600 via-violet-500 to-cyan-500",
+  "realtime-chat-app": "from-indigo-600 via-blue-600 to-cyan-500",
+  "gitgotech-ecommerce": "from-orange-500 via-rose-500 to-fuchsia-600",
+  mynexthome: "from-emerald-500 via-teal-600 to-cyan-700",
+  "influencer-marketing": "from-pink-500 via-fuchsia-600 to-violet-700",
 };
 
 interface ProjectVisualProps {

@@ -22,7 +22,7 @@ export function TechStack() {
         <SectionHeading
           eyebrow="Tech Stack"
           title="Tools I reach for every day"
-          description="A curated stack refined over seven years of production work — chosen for developer experience, performance, and longevity."
+          description="The frontend, backend, database, and hosting tools I use to build and ship web applications."
         />
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

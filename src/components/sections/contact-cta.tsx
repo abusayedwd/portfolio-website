@@ -21,8 +21,8 @@ export function ContactCta() {
               Ready to build something high-impact?
             </h2>
             <p className="mx-auto mt-4 max-w-md text-balance text-muted-foreground">
-              Open to senior product engineering roles, collaborative freelance
-              work, and thoughtful partnerships. I usually reply within 24 hours.
+              Open to full-stack and frontend development roles, freelance work,
+              and collaborative projects.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

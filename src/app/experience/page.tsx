@@ -7,7 +7,7 @@ import { Testimonials } from "@/components/sections/testimonials";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "My professional journey — from award-winning agency work to senior engineering at venture-backed startups and platform teams.",
+    "My professional journey — from frontend developer to full-stack developer at STA, plus my education.",
   alternates: { canonical: "/experience" },
 };
 

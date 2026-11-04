@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     template: `%s — ${SITE_CONFIG.name}`,
   },
   description:
-    "Senior Frontend Engineer and Full-Stack Developer building high-performance web products with React, Next.js, and TypeScript.",
+    "Full-Stack Developer building responsive web applications and REST API integrations with React, Next.js, Node.js, and TypeScript.",
   keywords: [
-    "Senior Frontend Engineer",
+    "Frontend Developer",
     "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
@@ -54,7 +54,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_CONFIG.name} — ${SITE_CONFIG.role}`,
     description: SITE_CONFIG.tagline,
-    creator: "@adnansayed_dev",
     images: ["/og-image.png"],
   },
   robots: {
@@ -93,9 +92,8 @@ const personJsonLd = {
     addressCountry: "BD",
   },
   sameAs: [
-    "https://github.com/adnansayed",
-    "https://linkedin.com/in/adnansayed",
-    "https://x.com/adnansayed_dev",
+    "https://github.com/abusayedwd",
+    "https://linkedin.com/in/abu-sayed-6619b127b",
   ],
 };
 

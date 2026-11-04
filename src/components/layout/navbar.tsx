@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -55,8 +56,14 @@ export function Navbar() {
             aria-label={`${SITE_CONFIG.name} — home`}
             className="group flex min-w-0 items-center gap-2.5"
           >
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 font-mono text-sm font-bold text-white shadow-lg shadow-indigo-500/25 transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
-              {SITE_CONFIG.initials}
+            <span className="relative flex size-9 shrink-0 overflow-hidden rounded-xl shadow-lg shadow-indigo-500/25 ring-1 ring-border transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
+              <Image
+                src="/images/profile.jpg"
+                alt={`${SITE_CONFIG.name} profile photo`}
+                fill
+                sizes="36px"
+                className="object-cover"
+              />
             </span>
             <span className="truncate text-sm font-semibold tracking-tight">
               {SITE_CONFIG.name}

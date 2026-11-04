@@ -10,16 +10,34 @@ export type ProjectCategory =
 
 export type ProjectStatus = "Completed" | "In Progress" | "Maintained";
 
+/** One deployable part of a project (frontend, server, dashboard, ...). */
+export interface ProjectPart {
+  name: string;
+  /** Screenshot from public/images shown on the details page. */
+  image?: string;
+  /** Short write-up about what this part does. */
+  description?: string;
+  /** What this part offers, e.g. admin capabilities. */
+  features?: string[];
+  tech: string[];
+  github?: string;
+  live?: string;
+}
+
 export interface Project {
   id: string;
   title: string;
   description: string;
+  /** Longer write-up shown on the project details page. */
+  details?: string;
   image: string;
   techStack: string[];
   features: string[];
   status: ProjectStatus;
   github: string;
   demo: string;
+  /** Repos and live links per part, e.g. Frontend / Server / Dashboard. */
+  parts?: ProjectPart[];
   category: Exclude<ProjectCategory, "All">[];
   date: string;
   featured?: boolean;

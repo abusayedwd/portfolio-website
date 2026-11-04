@@ -1,8 +1,8 @@
 import type { StatItem } from "@/types";
 
 export const stats: StatItem[] = [
-  { label: "Projects Delivered", value: 48, suffix: "+" },
-  { label: "Years of Experience", value: 7, suffix: "+" },
+  { label: "Projects Showcased", value: 4, suffix: "" },
+  { label: "Years of Experience", value: 2, suffix: "+" },
   { label: "Technologies Mastered", value: 30, suffix: "+" },
   { label: "Happy Clients", value: 26, suffix: "+" },
   { label: "Certifications", value: 6, suffix: "" },

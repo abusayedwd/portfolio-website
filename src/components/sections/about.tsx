@@ -32,11 +32,9 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { year: "2019", event: "Graduated CSE, started freelancing" },
-  { year: "2020", event: "Joined PixelWorks — award-winning agency work" },
-  { year: "2021", event: "First startup role at Brightflow (Series A)" },
-  { year: "2023", event: "Senior engineer at Polygon Labs" },
-  { year: "2026", event: "Leading platform frontend for 120k+ devs" },
+  { year: "2018", event: "Completed B.Sc. at Tongi Government College" },
+  { year: "2024", event: "Started as Frontend Developer at STA" },
+  { year: "2025", event: "Moved into Full-Stack Developer role at STA" },
 ];
 
 export function About() {
@@ -53,22 +51,16 @@ export function About() {
           <Reveal direction="right">
             <div className="flex h-full flex-col gap-5 rounded-3xl border border-border bg-card p-8">
               <p className="leading-relaxed text-muted-foreground">
-                I&apos;m a product-minded engineer who combines strong frontend
-                fundamentals with a sharp eye for detail. Over the last seven
-                years, I&apos;ve worked across freelance projects, agency teams,
-                and high-growth startups to build interfaces that are not only
-                beautiful, but dependable under real-world pressure.
+                I&apos;m a full-stack developer with over two years of experience
+                building responsive web applications. I work across the frontend
+                and backend, creating user-friendly interfaces with React.js and
+                Next.js, and connecting them to REST APIs built with Node.js,
+                Express.js, and PHP.
               </p>
               <p className="leading-relaxed text-muted-foreground">
-                My sweet spot sits at the intersection of engineering rigor and
-                user experience. I&apos;ve led design systems, improved Core Web
-                Vitals on high-traffic products, and helped teams ship features
-                faster without sacrificing quality or accessibility.
-              </p>
-              <p className="leading-relaxed text-muted-foreground">
-                Beyond shipping features, I enjoy improving how teams work:
-                mentoring engineers, strengthening implementation standards, and
-                creating UI systems that scale across products and collaborators.
+                My focus is on responsive layouts, reusable components, and clean
+                REST API integrations, so features work well on every screen and
+                stay easy to maintain.
               </p>
 
               <div className="mt-auto grid grid-cols-2 gap-3 pt-2">
@@ -116,9 +108,8 @@ export function About() {
                 <p className="text-sm leading-relaxed">
                   <span className="font-semibold">Currently:</span>{" "}
                   <span className="text-muted-foreground">
-                    Senior Full Stack Engineer at Polygon Labs, based in{" "}
-                    {SITE_CONFIG.location}, working remotely with teams across
-                    four time zones.
+                    Full-Stack Developer at STA, based in{" "}
+                    {SITE_CONFIG.location}.
                   </span>
                 </p>
               </div>

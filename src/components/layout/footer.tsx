@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Mail } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG } from "@/constants";
@@ -37,8 +38,14 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Link href="/" className="inline-flex items-center gap-2.5">
-              <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 font-mono text-sm font-bold text-white">
-                {SITE_CONFIG.initials}
+              <span className="relative flex size-9 overflow-hidden rounded-xl ring-1 ring-border">
+                <Image
+                  src="/images/profile.jpg"
+                  alt={`${SITE_CONFIG.name} profile photo`}
+                  fill
+                  sizes="36px"
+                  className="object-cover"
+                />
               </span>
               <span className="text-sm font-semibold">{SITE_CONFIG.name}</span>
             </Link>

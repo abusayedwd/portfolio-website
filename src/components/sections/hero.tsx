@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight, FileDown, MapPin } from "lucide-react";
@@ -28,15 +29,16 @@ export function Hero() {
           className="mx-auto flex max-w-3xl flex-col items-center text-center"
         >
           <motion.div variants={staggerItem} className="mb-7">
-            <div className="mx-auto flex size-20 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 via-violet-500 to-cyan-500 p-[3px] shadow-xl shadow-indigo-500/20">
-              <div className="flex size-full items-center justify-center rounded-full bg-background">
-                <span
-                  role="img"
-                  aria-label={`${SITE_CONFIG.name} monogram`}
-                  className="gradient-text select-none font-mono text-2xl font-bold"
-                >
-                  {SITE_CONFIG.initials}
-                </span>
+            <div className="mx-auto flex size-44 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 via-violet-500 to-cyan-500 p-[4px] shadow-xl shadow-indigo-500/20 sm:size-56">
+              <div className="relative flex size-full items-center justify-center overflow-hidden rounded-full bg-background">
+                <Image
+                  src="/images/profile.jpg"
+                  alt={`${SITE_CONFIG.name} profile photo`}
+                  fill
+                  sizes="(min-width: 640px) 224px, 176px"
+                  priority
+                  className="object-cover"
+                />
               </div>
             </div>
           </motion.div>
