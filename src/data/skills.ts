@@ -25,7 +25,7 @@ import {
 } from "react-icons/si";
 import { FaAws, FaServer, FaDatabase, FaLayerGroup, FaCode } from "react-icons/fa6";
 import { VscCode } from "react-icons/vsc";
-import type { Skill, TechCategory } from "@/types";
+import type { TechCategory } from "@/types";
 
 export const techCategories: TechCategory[] = [
   {
@@ -92,24 +92,4 @@ export const techCategories: TechCategory[] = [
       { name: "UI Implementation", icon: FaDatabase, level: "Advanced", color: "#F472B6" },
     ],
   },
-];
-
-// Bar values are placeholders; replace them with your own numbers.
-export const skills: Skill[] = [
-  { name: "React / Next.js", percentage: 90, category: "Frontend" },
-  { name: "JavaScript / TypeScript", percentage: 88, category: "Frontend" },
-  { name: "Tailwind CSS / Responsive UI", percentage: 90, category: "Frontend" },
-  { name: "Node.js / Express / REST APIs", percentage: 85, category: "Backend" },
-  { name: "PHP", percentage: 65, category: "Backend" },
-  { name: "MongoDB / Supabase", percentage: 82, category: "Backend" },
-  { name: "AWS / VPS / Hostinger", percentage: 75, category: "Engineering" },
-  { name: "Git / GitHub / Postman", percentage: 88, category: "Engineering" },
-];
-
-// Placeholder values, replace with your own numbers.
-export const circularSkills: Skill[] = [
-  { name: "Frontend", percentage: 90, category: "core" },
-  { name: "Backend", percentage: 82, category: "core" },
-  { name: "UI / UX", percentage: 85, category: "core" },
-  { name: "DevOps", percentage: 72, category: "core" },
 ];

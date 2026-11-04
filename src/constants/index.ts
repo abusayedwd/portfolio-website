@@ -34,7 +34,6 @@ export const FOOTER_LINKS: NavLink[] = [
   ...NAV_LINKS,
   { label: "Skills", href: "/skills" },
   { label: "Services", href: "/services" },
-  { label: "Certificates", href: "/certificates" },
 ];
 
 export const WEB3FORMS_ACCESS_KEY =

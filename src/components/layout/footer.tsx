@@ -8,7 +8,6 @@ import type { NavLink } from "@/types";
 const MORE_LINKS: NavLink[] = [
   { label: "Skills", href: "/skills" },
   { label: "Services", href: "/services" },
-  { label: "Certificates", href: "/certificates" },
 ];
 
 function FooterColumn({ title, links }: { title: string; links: NavLink[] }) {

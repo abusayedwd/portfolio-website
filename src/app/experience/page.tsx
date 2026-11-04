@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/common/page-header";
 import { Experience } from "@/components/sections/experience";
 import { Education } from "@/components/sections/education";
-import { Testimonials } from "@/components/sections/testimonials";
 
 export const metadata: Metadata = {
   title: "Experience",
@@ -21,7 +20,6 @@ export default function ExperiencePage() {
       />
       <Experience />
       <Education />
-      <Testimonials />
     </>
   );
 }

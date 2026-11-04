@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/common/page-header";
 import { Projects } from "@/components/sections/projects";
-import { GithubSection } from "@/components/sections/github";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -19,7 +18,6 @@ export default function ProjectsPage() {
         description="Every project here shipped to real users. Filter by category to explore."
       />
       <Projects />
-      <GithubSection />
     </>
   );
 }

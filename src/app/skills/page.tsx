@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/common/page-header";
 import { TechStack } from "@/components/sections/tech-stack";
-import { Skills } from "@/components/sections/skills";
 
 export const metadata: Metadata = {
   title: "Skills",
@@ -19,7 +18,6 @@ export default function SkillsPage() {
         description="A transparent look at what I use daily and how deep each skill goes."
       />
       <TechStack />
-      <Skills />
     </>
   );
 }
