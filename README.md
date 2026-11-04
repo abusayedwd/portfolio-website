@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Portfolio — Adnan Sayed
+
+A premium, production-ready portfolio website built with Next.js 15, React 19, TypeScript, Tailwind CSS v4, and Framer Motion. No backend required — all content lives in local TypeScript data files.
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router, Turbopack)
+- **UI:** React 19, Tailwind CSS v4, shadcn-style components
+- **Animation:** Framer Motion (+ GSAP available where needed)
+- **Icons:** Lucide React, React Icons
+- **Theming:** next-themes (dark / light / system)
+- **Forms:** Web3Forms (frontend-only contact form)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Personal info** — edit `src/constants/index.ts` (name, role, email, socials, resume URL).
+2. **Content** — all content lives in `src/data/`:
+   - `projects.ts`, `skills.ts`, `experience.ts`, `services.ts`, `certificates.ts`, `blog.ts`, `social.ts`, `testimonials.ts`, `stats.ts`
+3. **Contact form** — create a free access key at [web3forms.com](https://web3forms.com) and add it to `.env.local`:
 
-## Learn More
+```bash
+NEXT_PUBLIC_WEB3FORMS_KEY=your-access-key
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Resume** — replace `public/resume.pdf` with your real resume.
+5. **OG image** — add a 1200×630 `public/og-image.png` for social sharing cards.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/                # Routes (App Router) + SEO (sitemap, robots, manifest)
+├── components/
+│   ├── ui/             # Primitives (button, card, badge, input…)
+│   ├── layout/         # Navbar, footer, theme provider/toggle
+│   ├── sections/       # Page sections (hero, projects, contact…)
+│   └── common/         # Shared building blocks (reveal, magnetic, aurora…)
+├── hooks/              # Custom hooks (typing effect, count-up, scroll…)
+├── lib/                # Utilities & motion variants
+├── constants/          # Site config & navigation
+├── types/              # Shared TypeScript types
+└── data/               # All content (projects, skills, blog…)
+```
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Command         | Description                    |
+| --------------- | ------------------------------ |
+| `npm run dev`   | Start dev server (Turbopack)   |
+| `npm run build` | Production build               |
+| `npm run start` | Serve the production build     |
+| `npm run lint`  | Run ESLint                     |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features
+
+- Dark / light / system theme with zero-flash hydration
+- Scroll progress bar, cursor glow, aurora backgrounds, magnetic buttons
+- Filterable project grid, animated skill bars & circular indicators
+- Vertical experience timeline, testimonial slider, animated stat counters
+- Local-data blog with categories, reading time, and static generation
+- Contact form with validation, success animation, and Web3Forms delivery
+- Full SEO: metadata, Open Graph, Twitter cards, JSON-LD, sitemap, robots, manifest
+- Accessible: semantic HTML, ARIA labels, keyboard navigation, focus states, reduced-motion support
